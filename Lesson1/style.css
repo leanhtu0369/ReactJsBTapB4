@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+.table-wrapper {
+  width: 400px;
+  height: 300px;
+  overflow: scroll;
+  margin: 30px auto 0; 
+  white-space: nowrap;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+}
+
+table {
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 15px 20px;
+  border: 1px solid #dfe2e6
+}
+
+table thead {
+  background-image: radial-gradient( at left,#904782,  #68848e);
+  color: #fff;
+  font-weight: bold;
+}
+table thead th i {
+  margin-right: 2px;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+table tbody tr:nth-child(even) {
+  background: #fff;
+}
+
+table tbody td.coin {
+  font-weight: bold;
+  position: relative;
+}
+table tbody td.coin::after {
+  content: "";
+  background-image: url(images/coin.png);
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
